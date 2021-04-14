@@ -10,14 +10,13 @@
 }
 
 .horoscope {
-    background-color: rgb(111, 77, 145);
+    background-color: rgb(130, 84, 161);
     border: 1px groove rgb(49, 34, 64);
     border-radius: 5px;
     padding: 25px;
 }
 
 .configuration {
-    background-color: rgb(214, 209, 176);
     border: 1px groove rgb(110, 106, 82);
     border-radius: 5px;
     padding: 25px;
@@ -25,10 +24,12 @@
 }
 
 .button {
+    background-color: transparent;
+    border: 1px solid rgb(75, 75, 75);
+    color: rgb(75, 75, 75);
     width: 150px;
     padding: 5px;
     border-radius: 5px;
-    border: none;
 }
 
 p,h1,h2,h3,h4,h5,h6,label,button {
@@ -51,10 +52,29 @@ h4 {
     font-weight: 200;
 }
 
+p {
+    font-weight: 100;
+}
+
 .w-25 {
     width: 25%;
 }
 
 .w-50 {
     width: 50%;
+}
+
+.border-top-white {
+    border: 0;
+    border-top: 1px solid white;
+}
+
+.border-bottom-black {
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+.large-display {
+    font-size: 50px;
+    font-weight: 100;
 }
