@@ -35,7 +35,7 @@ function loadHoroscope(sign) {
 }
 
 function loadWeather(lat, long) {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=3373b692a45fa1b95087370f4227da8c`).then(res => res.json().then(data => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=3373b692a45fa1b95087370f4227da8c`).then(res => res.json().then(data => {
         fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&result_type=locality&key=AIzaSyCqAtfJQCTc951PiO9p5T6oTbT6RSWdvmA`).then(res => res.json().then(gglData => {
             const [city, _, state, c] = gglData["results"][0]["address_components"];
             $('#weather-container').html(`
