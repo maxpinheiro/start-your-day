@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0771dc85-5c05-406a-8986-d6c38c668056" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/render.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618176984228</updated>
       <workItem from="1618176985464" duration="14338000" />
-      <workItem from="1618414843069" duration="15957000" />
+      <workItem from="1618414843069" duration="17664000" />
     </task>
     <servers />
   </component>
@@ -81,16 +79,5 @@
     </state>
     <state x="434" y="159" width="670" height="742" key="search.everywhere.popup/0.0.1440.900/-232.-1080.1920.1080@0.0.1440.900" timestamp="1618435644471" />
     <state x="434" y="170" width="670" height="676" key="search.everywhere.popup/0.25.1440.821/-232.-1055.1920.1055@0.25.1440.821" timestamp="1618343020131" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/render.js</url>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

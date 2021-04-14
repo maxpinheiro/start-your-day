@@ -38,6 +38,7 @@ p,h1,h2,h3,h4,h5,h6,label,button {
 
 h1 {
     font-weight: 600;
+    font-size: 5vw;
 }
 
 h2 {
@@ -50,10 +51,12 @@ h3 {
 
 h4 {
     font-weight: 200;
+    font-size: 250%;
 }
 
 p {
     font-weight: 100;
+    font-size: 150%;
 }
 
 .w-25 {

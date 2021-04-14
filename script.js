@@ -63,9 +63,8 @@ function loadTarot() {
 
 function findPosition() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            loadWeather(position.coords.latitude, position.coords.longitude);
-        });
+        navigator.geolocation.getCurrentPosition(position => loadWeather(position.coords.latitude, position.coords.longitude),
+                error => alert(`Geolocation error: ${error.message}`), {timeout:5000});
     } else {
         alert("Sorry, your browser does not support HTML5 geolocation.");
     }
