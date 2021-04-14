@@ -1,5 +1,17 @@
 .bg-slate {
-    background-color: #e2e2e2;
+    background-color: rgb(226, 226, 226);
+}
+
+.weather {
+    background-color: rgb(156, 222, 255);
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.horoscope {
+    background-color: rgb(111, 77, 145);
+    padding: 25px;
+    border-radius: 5px;
 }
 
 p,h1,h2,h3,h4,h5,h6,label {
