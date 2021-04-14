@@ -4,29 +4,31 @@
 
 .weather {
     background-color: rgb(156, 222, 255);
-    border: solid rgb(87, 134, 158);
-    padding: 25px;
+    border: 1px groove rgb(87, 134, 158);
     border-radius: 5px;
+    padding: 25px;
 }
 
 .horoscope {
     background-color: rgb(111, 77, 145);
-    border-color: rgb(55, 35, 74);
-    padding: 25px;
+    border: 1px groove rgb(49, 34, 64);
     border-radius: 5px;
+    padding: 25px;
 }
 
 .configuration {
     background-color: rgb(214, 209, 176);
-    border-color: rgb(110, 106, 82);
-    padding: 25px;
+    border: 1px groove rgb(110, 106, 82);
     border-radius: 5px;
+    padding: 25px;
+    min-width: 250px;
 }
 
 .button {
     width: 150px;
     padding: 5px;
     border-radius: 5px;
+    border: none;
 }
 
 p,h1,h2,h3,h4,h5,h6,label,button {
