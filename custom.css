@@ -1,3 +1,7 @@
+.bg-stars {
+    background-image: url("stars.png");
+}
+
 .bg-slate {
     background-color: rgb(226, 226, 226);
 }
@@ -10,7 +14,7 @@
 }
 
 .horoscope {
-    background-color: rgb(130, 84, 161);
+    background-color: rgba(130, 84, 161, 0.5);
     border: 1px groove rgb(49, 34, 64);
     border-radius: 5px;
     padding: 25px;
