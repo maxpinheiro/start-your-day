@@ -22,21 +22,21 @@ function renderHoroscope(sign, description, mood, color, number, time) {
     signs.splice(0, 0, sign);
     $('#horoscope-container').html(`
             <div class="horoscope row mx-auto justify-content-center text-center text-white" id="horoscope-content">
-                <h4 class="">Today's Horoscope for ${sign}:</h4>
+                <h4 class="comfortaa">Today's Horoscope for ${sign}:</h4>
                 <div class="border-top-white pt-3 mx-auto d-block">
-                    <p class="">${description}</p>
-                    <div class="">
+                    <p class="comfortaa">${description}</p>
+                    <span>
+                        <label class="comfortaa" for="sign">Zodiac Sun Sign:</label>
+                        <select id="sign" name="sign" onchange="setZodiacSign()">
+                            ${signs.map(s => `<option value=${s}>${s}</option>`)}
+                        </select>
+                    </span>
+                    <div class="comfortaa">
                         <p>Mood: ${mood}</p>
                         <p>Color: ${color}</p>
                         <p>Lucky Number: ${number}</p>
                         <p>Lucky Time: ${time}</p>
                     </div>
-                    <span>
-                        <label for="sign">Zodiac Sun Sign:</label>
-                        <select id="sign" name="sign" onchange="setZodiacSign()">
-                            ${signs.map(s => `<option value=${s}>${s}</option>`)}
-                        </select>
-                    </span>
                 </div>
             </div>`);
 }
