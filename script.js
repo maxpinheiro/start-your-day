@@ -8,7 +8,7 @@ $(() => {
 window.onresize = () => setResponsive();
 
 function setZodiacSign() {
-    loadHoroscope($('#sign').val());
+    loadHoroscope($('#sign').val() || "Capricorn");
 }
 
 const days = {"Mon": "Monday", "Tue": "Tuesday", "Wed": "Wednesday", "Thu": "Thursday", "Fri": "Friday", "Sat": "Saturday", "Sun": "Sunday"};

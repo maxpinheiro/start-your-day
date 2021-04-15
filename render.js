@@ -17,6 +17,9 @@ function renderWeather(city, state, temp, high, low, forecast) {
 }
 
 function renderHoroscope(sign, description, mood, color, number, time) {
+    const signs = ["Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius"];
+    signs.splice(signs.indexOf(sign),1);
+    signs.splice(0, 0, sign);
     $('#horoscope-container').html(`
             <div class="horoscope row mx-auto justify-content-center text-center text-white" id="horoscope-content">
                 <h4 class="">Today's Horoscope for ${sign}:</h4>
@@ -28,6 +31,12 @@ function renderHoroscope(sign, description, mood, color, number, time) {
                         <p>Lucky Number: ${number}</p>
                         <p>Lucky Time: ${time}</p>
                     </div>
+                    <span>
+                        <label for="sign">Zodiac Sun Sign:</label>
+                        <select id="sign" name="sign" onchange="setZodiacSign()">
+                            ${signs.map(s => `<option value=${s}>${s}</option>`)}
+                        </select>
+                    </span>
                 </div>
             </div>`);
 }
