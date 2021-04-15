@@ -7,7 +7,7 @@
 }
 
 .weather {
-    background-color: rgb(156, 222, 255);
+    background-color: rgba(156, 222, 255, 0.5);
     border: 1px groove rgb(87, 134, 158);
     border-radius: 5px;
     padding: 25px;
