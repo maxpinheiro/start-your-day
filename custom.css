@@ -2,6 +2,10 @@
     background-image: url("stars.png");
 }
 
+.bg-clouds {
+    background-image: url("clouds.jpeg");
+}
+
 .bg-slate {
     background-color: rgb(226, 226, 226);
 }

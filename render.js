@@ -27,7 +27,7 @@ function renderHoroscope(sign, description, mood, color, number, time) {
                     <p class="comfortaa">${description}</p>
                     <span>
                         <label class="comfortaa" for="sign">Zodiac Sun Sign:</label>
-                        <select id="sign" name="sign" onchange="setZodiacSign()">
+                        <select id="sign" name="sign" onchange="loadHoroscope()">
                             ${signs.map(s => `<option value=${s}>${s}</option>`)}
                         </select>
                     </span>

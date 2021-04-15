@@ -1,14 +1,44 @@
 $(() => {
+    $('#weather-container').hide();
     setResponsive();
     loadDate();
-    setZodiacSign();
-    findPosition();
+    loadHoroscope();
+    //findPosition();
 });
 
 window.onresize = () => setResponsive();
 
-function setZodiacSign() {
-    loadHoroscope($('#sign').val() || "Capricorn");
+
+function setResponsive() {
+    // desktop
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $('#weather-container').addClass('row');
+    } else {
+        $('#weather-container').removeClass('row');
+    }
+}
+
+function setView(view) {
+    switch (view) {
+        case "horoscope":
+            $('body').removeClass().addClass("bg-stars");
+            $('.btn-group button').removeClass().prop('disabled',false).addClass('btn btn-secondary');
+            $('#horoscope-btn').prop('disabled',true);
+            $('#horoscope-container').show();
+            $('#weather-container').hide();
+            loadHoroscope();
+            break;
+        case "weather":
+            $('body').removeClass().addClass("bg-clouds");
+            $('.btn-group button').removeClass().prop('disabled',false).addClass('btn btn-primary');
+            $('#weather-btn').prop('disabled',true);
+            $('#weather-container').show();
+            $('#horoscope-container').hide();
+            loadWeather(42.360081, -71.058884);
+            break;
+        default:
+            break;
+    }
 }
 
 const days = {"Mon": "Monday", "Tue": "Tuesday", "Wed": "Wednesday", "Thu": "Thursday", "Fri": "Friday", "Sat": "Saturday", "Sun": "Sunday"};
@@ -20,21 +50,29 @@ function loadDate() {
     $('#date').html(`Today is ${days[day]}, ${months[month]}, ${date}${dateSuffix[date%10] || "th"} ${year}`);
 }
 
-function loadHoroscope(sign) {
+function loadHoroscope() {
+    const sign = $('#sign').val() || "Capricorn";
+    /*$.ajax({
+        url: `https://aztro.sameerkumar.website/?sign=${sign}&day=today`,
+        headers: {
+            "Access-Control-Allow-Headers": "*"
+        },
+        type: "POST",
+        dataType: "json",
+        success: function (data) {
+            renderHoroscope(sign, data['description'], data['mood'], data['color'], data['lucky_number'], data['lucky_time']);
+        },
+        error: function () {
+            console.log("error");
+        }
+    });
+*/
+
     fetch(`https://aztro.sameerkumar.website/?sign=${sign}&day=today`, {
         method: 'POST',
     }).then(res => res.json().then(data => {
         renderHoroscope(sign, data['description'], data['mood'], data['color'], data['lucky_number'], data['lucky_time']);
     }));
-}
-
-function setResponsive() {
-    // desktop
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        $('#weather-container').addClass('row');
-    } else {
-        $('#weather-container').removeClass('row');
-    }
 }
 
 function loadWeather(lat, long) {
@@ -64,7 +102,7 @@ function loadTarot() {
 function findPosition() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => loadWeather(position.coords.latitude, position.coords.longitude),
-                error => alert(`Geolocation error: ${error.message}`), {timeout:5000});
+                error => console.log(`Geolocation error: ${error.message}`), {timeout:5000});
     } else {
         alert("Sorry, your browser does not support HTML5 geolocation.");
     }
