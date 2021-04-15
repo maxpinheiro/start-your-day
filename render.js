@@ -25,7 +25,7 @@ function renderHoroscope(sign, description, mood, color, number, time) {
                 <h4 class="">Today's Horoscope for ${sign}:</h4>
                 <div class="border-top-white pt-3 mx-auto d-block">
                     <p class="">${description}</p>
-                    <div class="row justify-content-around">
+                    <div class="">
                         <p>Mood: ${mood}</p>
                         <p>Color: ${color}</p>
                         <p>Lucky Number: ${number}</p>
