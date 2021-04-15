@@ -1,9 +1,9 @@
 $(() => {
-    $('#weather-container').hide();
+    $('#horoscope-container').hide();
     setResponsive();
     loadDate();
-    loadHoroscope();
-    //findPosition();
+    //loadHoroscope();
+    findPosition();
 });
 
 window.onresize = () => setResponsive();
@@ -79,7 +79,7 @@ function loadWeather(lat, long) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=3373b692a45fa1b95087370f4227da8c`).then(res => res.json().then(data => {
         fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&result_type=locality&key=AIzaSyCqAtfJQCTc951PiO9p5T6oTbT6RSWdvmA`).then(res => res.json().then(gglData => {
             const [city, _, state, c] = gglData["results"][0]["address_components"];
-            renderWeather(city["long_name"], state["short_name"], Math.round(data['main']['temp']), Math.round(data['main']['temp_max']), Math.round(data['main']['temp_min']), data['weather'][0]['main']);
+            renderWeather(city["long_name"], state["short_name"], Math.round(data['main']['temp']), Math.round(data['main']['feels_like']), Math.round(data['main']['temp_max']), Math.round(data['main']['temp_min']), data['weather'][0]['main'], Math.round(data['wind']['speed']), Math.round(data['wind']['deg']));
     }))}));
 }
 
@@ -102,7 +102,7 @@ function loadTarot() {
 function findPosition() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => loadWeather(position.coords.latitude, position.coords.longitude),
-                error => console.log(`Geolocation error: ${error.message}`), {timeout:5000});
+                error => loadWeather(42.360081, -71.058884), {timeout:5000});
     } else {
         alert("Sorry, your browser does not support HTML5 geolocation.");
     }

@@ -12,20 +12,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="custom.css">
 </head>
-<body class="bg-stars">
+<body class="bg-clouds">
     <div class="container-fluid my-3">
         <div class="text-center mx-auto">
-            <div class="sticky-top text-white">
+            <div class="text-white">
                 <h1 class="">Start Your Day</h1>
                 <h3 class="" id="date"></h3>
                 <div class="btn-group">
-                    <button disabled type="button" class="btn btn-secondary" id="horoscope-btn" onclick="setView('horoscope')">Horoscope</button>
-                    <button type="button" class="btn btn-secondary" id="weather-btn" onclick="setView('weather')">Weather</button>
-                    <button type="button" class="btn btn-secondary" id="news-btn" onclick="setView('news')">News</button>
+                    <button disabled type="button" class="btn btn-primary" id="weather-btn" onclick="setView('weather')">Weather</button>
+                    <button type="button" class="btn btn-primary" id="horoscope-btn" onclick="setView('horoscope')">Horoscope</button>
+                    <button type="button" class="btn btn-primary" id="news-btn" onclick="setView('news')">News</button>
                 </div>
             </div>
-            <div class="mx-auto my-3" id="horoscope-container"></div>
             <div class="mx-auto my-3" id="weather-container"></div>
+            <div class="mx-auto my-3" id="horoscope-container"></div>
             <div class="mx-auto my-3" id="news-container"></div>
         </div>
     </div>
