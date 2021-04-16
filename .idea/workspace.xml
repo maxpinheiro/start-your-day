@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0771dc85-5c05-406a-8986-d6c38c668056" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/HoroscopeTab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WeatherTab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/render.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clouds.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/clouds.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/render.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stars.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/stars.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunrise.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/sunrise.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +54,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/media" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/bootstrap" />
     </key>
@@ -57,7 +70,8 @@
       <option name="presentableId" value="Default" />
       <updated>1618176984228</updated>
       <workItem from="1618176985464" duration="14338000" />
-      <workItem from="1618414843069" duration="32567000" />
+      <workItem from="1618414843069" duration="32861000" />
+      <workItem from="1618588815407" duration="8216000" />
     </task>
     <servers />
   </component>
@@ -65,10 +79,11 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="229" y="86" key="SettingsEditor" timestamp="1618438340472">
+    <state x="247" y="55" key="SettingsEditor" timestamp="1618592018937">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="229" y="86" key="SettingsEditor/0.0.1440.900/-232.-1080.1920.1080@0.0.1440.900" timestamp="1618438340472" />
+    <state x="247" y="55" key="SettingsEditor/0.0.1440.900/-232.-1080.1920.1080@0.0.1440.900" timestamp="1618592018937" />
+    <state x="229" y="103" key="SettingsEditor/0.25.1440.820/-232.-1055.1920.1055@0.25.1440.820" timestamp="1618590223888" />
     <state x="519" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618360424206">
       <screen x="0" y="25" width="1440" height="821" />
     </state>
