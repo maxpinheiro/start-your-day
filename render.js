@@ -19,7 +19,7 @@ const dirCompass = (dir) => {
 };
 
 function renderWeather(city, state, temp, feels_like, high, low, forecast, wind_speed, wind_dir) {
-    const weatherIcons = {"Clouds": "<i class=\"fas fa-cloud fa-4x text-white\"></i>", "Rain": "<i class=\"fas fa-cloud-rain fa-4x text-white\"></i>"};
+    const weatherIcons = {"Clouds": "<i class=\"fas fa-cloud fa-4x text-white\"></i>", "Rain": "<i class=\"fas fa-cloud-rain fa-4x text-white\"></i>", "Snow": "<i class=\"fas fa-snowflake fa-4x text-white\"></i>"};
     $('#weather-container').html(`
         <div class="weather mx-auto text-center d-flex flex-column">
             <h4 class="border-bottom-black pb-3">Today's Weather in ${city}, ${state}:</h4>
