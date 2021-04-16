@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/start-your-day/static/css/main.d0cc693c.chunk.css",
+    "main.js": "/start-your-day/static/js/main.e8384eef.chunk.js",
+    "main.js.map": "/start-your-day/static/js/main.e8384eef.chunk.js.map",
+    "runtime-main.js": "/start-your-day/static/js/runtime-main.5638f396.js",
+    "runtime-main.js.map": "/start-your-day/static/js/runtime-main.5638f396.js.map",
+    "static/js/2.7e0f5ace.chunk.js": "/start-your-day/static/js/2.7e0f5ace.chunk.js",
+    "static/js/2.7e0f5ace.chunk.js.map": "/start-your-day/static/js/2.7e0f5ace.chunk.js.map",
+    "static/js/3.fbe5d6b8.chunk.js": "/start-your-day/static/js/3.fbe5d6b8.chunk.js",
+    "static/js/3.fbe5d6b8.chunk.js.map": "/start-your-day/static/js/3.fbe5d6b8.chunk.js.map",
+    "index.html": "/start-your-day/index.html",
+    "static/css/main.d0cc693c.chunk.css.map": "/start-your-day/static/css/main.d0cc693c.chunk.css.map",
+    "static/js/2.7e0f5ace.chunk.js.LICENSE.txt": "/start-your-day/static/js/2.7e0f5ace.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/start-your-day/static/media/stars.7027847b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5638f396.js",
+    "static/js/2.7e0f5ace.chunk.js",
+    "static/css/main.d0cc693c.chunk.css",
+    "static/js/main.e8384eef.chunk.js"
+  ]
+}
