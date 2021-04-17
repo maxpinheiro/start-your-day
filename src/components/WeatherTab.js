@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCloud, faCloudRain, faSnowflake} from "@fortawesome/free-solid-svg-icons";
+import {faCloud, faCloudRain, faSnowflake, faSmog} from "@fortawesome/free-solid-svg-icons";
 
 export default class WeatherTab extends React.Component {
     state = {
@@ -19,6 +19,7 @@ export default class WeatherTab extends React.Component {
         "Clouds": faCloud,
         "Rain": faCloudRain,
         "Snow": faSnowflake,
+        "Mist": faSmog,
     };
 
     componentDidMount() {

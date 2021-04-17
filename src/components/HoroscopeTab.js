@@ -40,7 +40,7 @@ export default class HoroscopeTab extends React.Component {
     render() {
         return (
             <div className="horoscope-container row mx-auto justify-content-center text-center text-white" id="horoscope-content">
-                <h4 className="comfortaa">Today's Horoscope for {this.state.sign}:</h4>
+                <h4 className="comfortaa">{this.state.sign && `Today's Horoscope for ${this.state.sign}:`}</h4>
                 <div className="border-top-white pt-3 mx-auto d-block">
                     <p className="comfortaa">{this.state.description}</p>
                     <span>
