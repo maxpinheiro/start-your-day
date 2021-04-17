@@ -17,6 +17,10 @@ export default class HoroscopeTab extends React.Component {
         this.loadHoroscope(this.props.sign || "Capricorn");
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.sign !== this.props.sign) this.loadHoroscope(this.props.sign || "Capricorn");
+    }
+
     loadHoroscope(sign) {
         fetch(`https://aztro.sameerkumar.website/?sign=${sign}&day=today`, {
             method: 'POST',
@@ -40,9 +44,9 @@ export default class HoroscopeTab extends React.Component {
                 <div className="border-top-white pt-3 mx-auto d-block">
                     <p className="comfortaa">{this.state.description}</p>
                     <span>
-                        <label className="comfortaa" for="sign">Zodiac Sun Sign:</label>
-                        <select id="sign" name="sign">
-                            {this.signs.map(s => <option value={s} onClick={() => this.props.setSign(s)}>{s}</option>)}
+                        <label className="comfortaa" htmlFor="sign">Zodiac Sun Sign:</label>
+                        <select id="sign" name="sign" onChange={(e) => this.props.setSign(e.target.value)}>
+                            {this.signs.map(s => <option value={s}>{s}</option>)}
                         </select>
                     </span>
                     <div className="comfortaa">

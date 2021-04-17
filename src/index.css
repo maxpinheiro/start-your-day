@@ -31,3 +31,39 @@ html, body {
     border-radius: 5px;
     padding: 25px;
 }
+
+/* typography */
+
+p,h1,h2,h3,h4,h5,h6,label,button {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.comfortaa {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+h4 {
+    font-weight: 200;
+    font-size: 250%;
+}
+
+p {
+    font-weight: 100;
+}
+
+.large-display {
+    font-size: 50px;
+    font-weight: 100;
+}
