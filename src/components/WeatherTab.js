@@ -25,7 +25,7 @@ export default class WeatherTab extends React.Component {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 position => this.loadWeather(position.coords.latitude, position.coords.longitude),
-                error => this.loadWeather(42.360081, -71.058884), {timeout: 3000});
+                error => alert("Sorry, your browser's HTML5 geolocation is not working. Please activate geolocation. You may need to ensure you are using an https connection instead of http."));
         } else {
             alert("Sorry, your browser does not support HTML5 geolocation.");
         }
