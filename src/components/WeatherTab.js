@@ -34,21 +34,18 @@ export default class WeatherTab extends React.Component {
 
     loadWeather(lat, lon) {
         fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=3373b692a45fa1b95087370f4227da8c`).then(res => res.json().then(data => {
-            fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&result_type=locality&key=AIzaSyCqAtfJQCTc951PiO9p5T6oTbT6RSWdvmA`).then(res => res.json().then(gglData => {
-                const [city, _, state, c] = gglData["results"][0]["address_components"];
-                this.setState(prevState => (
-                    {...prevState,
-                        city: city["long_name"],
-                        state: state["short_name"],
-                        temp: Math.round(data['main']['temp']),
-                        feelsLike: Math.round(data['main']['feels_like']),
-                        high: Math.round(data['main']['temp_max']),
-                        low: Math.round(data['main']['temp_min']),
-                        forecast: data['weather'][0]['main'],
-                        windSpeed: Math.round(data['wind']['speed']),
-                        windDir: Math.round(data['wind']['deg']),
-                    }))
-            }))}));
+            this.setState(prevState => (
+                {...prevState,
+                    city: data['main']['name'],
+                    temp: Math.round(data['main']['temp']),
+                    feelsLike: Math.round(data['main']['feels_like']),
+                    high: Math.round(data['main']['temp_max']),
+                    low: Math.round(data['main']['temp_min']),
+                    forecast: data['weather'][0]['main'],
+                    windSpeed: Math.round(data['wind']['speed']),
+                    windDir: Math.round(data['wind']['deg']),
+                }))
+            }));
     }
 
     dirCompass(dir) {
@@ -74,7 +71,7 @@ export default class WeatherTab extends React.Component {
     render() {
         return (
             <div className="weather-container row mx-auto text-center d-flex flex-column">
-                <h4 className="">{this.state.city && `Today's Weather in ${this.state.city}, ${this.state.state}:`}</h4>
+                <h4 className="">{this.state.city && `Today's Weather in ${this.state.city}:`}</h4>
                 <div className="row d-flex justify-content-around">
                     <div className="col my-auto">
                         <p className="large-display m-0">{this.state.temp && `${this.state.temp} °F`}</p>
