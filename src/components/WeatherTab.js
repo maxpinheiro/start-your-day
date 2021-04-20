@@ -5,7 +5,6 @@ import {faCloud, faCloudRain, faSnowflake, faSmog} from "@fortawesome/free-solid
 export default class WeatherTab extends React.Component {
     state = {
         city: "",
-        state: "",
         temp: "",
         feelsLike: "",
         high: "",
@@ -36,7 +35,7 @@ export default class WeatherTab extends React.Component {
         fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=3373b692a45fa1b95087370f4227da8c`).then(res => res.json().then(data => {
             this.setState(prevState => (
                 {...prevState,
-                    city: data['main']['name'],
+                    city: data['name'],
                     temp: Math.round(data['main']['temp']),
                     feelsLike: Math.round(data['main']['feels_like']),
                     high: Math.round(data['main']['temp_max']),
