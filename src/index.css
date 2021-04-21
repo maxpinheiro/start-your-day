@@ -18,6 +18,26 @@ html, body {
     min-width: 100vw;
 }
 
+.bg-news {
+    background-image: url('media/newspaper.jpeg');
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.bg-news h1 {
+    color: black;
+}
+
+.bg-news h3 {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+}
+
 .weather-container {
     background-color: rgba(156, 222, 255, 0.5);
     border: 1px groove rgb(87, 134, 158);
@@ -28,6 +48,13 @@ html, body {
 .horoscope-container {
     background-color: rgba(130, 84, 161, 0.5);
     border: 1px groove rgb(49, 34, 64);
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.news-container {
+    background-color: rgba(209, 201, 159, 0.75);
+    border: 1px groove rgb(120, 117, 102);
     border-radius: 5px;
     padding: 25px;
 }
@@ -67,4 +94,15 @@ p {
 .large-display {
     font-size: 50px;
     font-weight: 100;
+}
+
+.headline {
+    font-weight: 400;
+}
+
+/* etc */
+
+.btn-warning {
+    background-color: rgb(237, 224, 171) !important;
+    border:  rgb(237, 224, 171) !important;
 }
