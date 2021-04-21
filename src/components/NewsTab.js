@@ -20,6 +20,7 @@ export default class NewsTab extends React.Component {
 
     loadNews() {
         fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=d889355982654972aed66bb7aa9bf9b4').then(res => res.json().then(data => {
+            if (!data["articles"]) return;
             this.setState(prevState => (
                 {
                     articles: data["articles"].slice(0, 10).map(article => {
@@ -32,7 +33,7 @@ export default class NewsTab extends React.Component {
                     }
                     )
                 }));
-        }));
+        }))
     }
 
     render() {
@@ -40,13 +41,15 @@ export default class NewsTab extends React.Component {
             <div className="news-container mx-auto text-center text-dark" id="news-content">
                 <h4 className="text-center">Today's Headlines in the US:</h4>
                 <div className="border-top-white pt-3 mx-auto d-block">
-                    {this.state.articles.map(article => (
+                    {   this.state.articles.length > 1 ?
+                        (this.state.articles.map(article => (
                         <div className="">
                             <a href={article.url || '#'} className="text-dark ">
                                 <p className="headline">{article.title && `${article.title} - ${article.date}`}</p>
                             </a>
-                        </div>
-                    ))}
+                        </div>))) :
+                        <p>Sorry, it seems like the news cannot be loaded now, likely because the API has exhausted its daily request limit. Try again later :(</p>
+                    }
                 </div>
             </div>
         );

@@ -12,6 +12,7 @@ export default class WeatherTab extends React.Component {
         forecast: "",
         windSpeed: "",
         windDir: "",
+        error: "",
     };
 
     weatherIcons = {
@@ -25,9 +26,13 @@ export default class WeatherTab extends React.Component {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 position => this.loadWeather(position.coords.latitude, position.coords.longitude),
-                error => alert("Sorry, your browser's HTML5 geolocation is not working. Please activate geolocation. You may need to ensure you are using an https connection instead of http."));
+                error => {
+                    alert("Sorry, your browser's HTML5 geolocation is not working. Please activate geolocation. You may need to ensure you are using an https connection instead of http.")
+                    this.setState(prevState => ({...prevState, error: "Sorry, the weather cannot be loaded because your browser's HTML5 geolocation is not working. Try again later :("}))
+                });
         } else {
             alert("Sorry, your browser does not support HTML5 geolocation.");
+            this.setState(prevState => ({...prevState, error: "Sorry, the weather cannot be loaded because your browser does not support HTML5 geolocation. Try again later :("}))
         }
     }
 
@@ -84,6 +89,10 @@ export default class WeatherTab extends React.Component {
                         <p className="">{this.state.windDir && `Wind: ${this.dirCompass(this.state.windDir)} ${this.state.windSpeed} mph`}</p>
                     </div>
                 </div>
+                {
+                    !this.state.error &&
+                    <p>{this.state.error}</p>
+                }
             </div>
         );
     }
