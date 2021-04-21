@@ -25,16 +25,11 @@ html, body {
     min-width: 100vw;
 }
 
-.bg-news h1 {
-    color: black;
-}
-
-.bg-news h3 {
+.bg-news h1, .bg-news h3 {
     color: black;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 3px;
     border-radius: 3px;
-    display: inline-block;
     text-align: center;
 }
 
