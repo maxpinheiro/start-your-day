@@ -27,7 +27,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div className={`${this.state.backgroundClass} mx-auto`}>
-                <div className="text-white text-center py-3">
+                <div className="text-white text-center pt-3">
                     <h1>Start Your Day</h1>
                     <h3>{this.state.date}</h3>
                     <div className="btn-group d-block my-2">

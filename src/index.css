@@ -27,7 +27,7 @@ html, body {
 
 .bg-news h1, .bg-news h3 {
     color: black;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(250, 247, 230, 0.85);
     padding: 3px;
     border-radius: 3px;
     text-align: center;
@@ -48,7 +48,7 @@ html, body {
 }
 
 .news-container {
-    background-color: rgba(209, 201, 159, 0.75);
+    background-color: rgba(219, 191, 151, 0.75);
     border: 1px groove rgb(120, 117, 102);
     border-radius: 5px;
     padding: 25px;
@@ -98,6 +98,6 @@ p {
 /* etc */
 
 .btn-warning {
-    background-color: rgb(237, 224, 171) !important;
-    border:  rgb(237, 224, 171) !important;
+    background-color: rgb(209, 191, 165) !important;
+    border:  rgb(209, 191, 165) !important;
 }
