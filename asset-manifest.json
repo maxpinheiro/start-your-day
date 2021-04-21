@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/start-your-day/static/css/main.6f755210.chunk.css",
-    "main.js": "/start-your-day/static/js/main.9d98b49d.chunk.js",
-    "main.js.map": "/start-your-day/static/js/main.9d98b49d.chunk.js.map",
+    "main.css": "/start-your-day/static/css/main.39a53ea1.chunk.css",
+    "main.js": "/start-your-day/static/js/main.7a8f9146.chunk.js",
+    "main.js.map": "/start-your-day/static/js/main.7a8f9146.chunk.js.map",
     "runtime-main.js": "/start-your-day/static/js/runtime-main.5638f396.js",
     "runtime-main.js.map": "/start-your-day/static/js/runtime-main.5638f396.js.map",
     "static/js/2.a39b3c05.chunk.js": "/start-your-day/static/js/2.a39b3c05.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.fbe5d6b8.chunk.js": "/start-your-day/static/js/3.fbe5d6b8.chunk.js",
     "static/js/3.fbe5d6b8.chunk.js.map": "/start-your-day/static/js/3.fbe5d6b8.chunk.js.map",
     "index.html": "/start-your-day/index.html",
-    "static/css/main.6f755210.chunk.css.map": "/start-your-day/static/css/main.6f755210.chunk.css.map",
+    "static/css/main.39a53ea1.chunk.css.map": "/start-your-day/static/css/main.39a53ea1.chunk.css.map",
     "static/js/2.a39b3c05.chunk.js.LICENSE.txt": "/start-your-day/static/js/2.a39b3c05.chunk.js.LICENSE.txt",
     "static/media/index.css": "/start-your-day/static/media/stars.7027847b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5638f396.js",
     "static/js/2.a39b3c05.chunk.js",
-    "static/css/main.6f755210.chunk.css",
-    "static/js/main.9d98b49d.chunk.js"
+    "static/css/main.39a53ea1.chunk.css",
+    "static/js/main.7a8f9146.chunk.js"
   ]
 }
